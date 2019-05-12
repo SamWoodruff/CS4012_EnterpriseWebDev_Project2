@@ -1,0 +1,19 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%--@elvariable id="educationForm" type="POJOs.EducationForm"--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<form:form modelAttribute="educationForm" method="POST">
+        <form:label path="degreeType">Degree Type:</form:label><br>
+        <form:input path="degreeType" value="${educationHistory.degreeType}"/><br>
+        <form:label path="degreeDiscipline">Degree Discipline:</form:label><br>
+        <form:input path="degreeDiscipline" value="${educationHistory.degreeDiscipline}"/><br>
+        <form:label path="yearsAchieved">Years Completed:</form:label><br>
+        <form:input path="yearsAchieved" value="${educationHistory.yearsAchieved}"/><br>
+        <input type ="submit" value="Confirm"/>
+</form:form><br>
+</body>

@@ -1,0 +1,21 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--@elvariable id="workForm" type="POJOs.WorkForm"--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+<form:form modelAttribute="workForm" method="POST">
+    <form:label path="jobTitle">Job Title:</form:label><br>
+    <form:input path="jobTitle" value="${workHistory.jobTitle}"/><br>
+    <form:label path="companyName">Company Name:</form:label><br>
+    <form:input path="companyName" value="${workHistory.companyName}"/><br>
+    <form:label path="yearsOfService">Years At Job:</form:label><br>
+    <form:input path="yearsOfService" value="${workHistory.yearsOfService}"/><br>
+    <input type="submit" value="Confirm"><br>
+</form:form><br><br>
+</body>
